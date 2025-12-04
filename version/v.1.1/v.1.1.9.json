@@ -43,7 +43,7 @@
   "controlStyles[8].styles[2]": "BorderBrush@PointerOver:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.22\"/>",
   "controlStyles[8].styles[3]": "Margin=2",
   "controlStyles[8].styles[4]": "Background@Pressed:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.08\"/>",
-  "controlStyles[8].styles[5]:": "BorderBrush@Pressed:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.15\"/>",
+  "controlStyles[8].styles[5]": "BorderBrush@Pressed:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.15\"/>",
 
   "controlStyles[9].target": "Button#ShowAllAppsButton > ContentPresenter@CommonStates",
   "controlStyles[9].styles[0]": "Background@Normal:=$ElementBG",
