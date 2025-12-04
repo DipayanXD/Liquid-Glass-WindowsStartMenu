@@ -3,18 +3,18 @@
   "controlStyles[0].styles[0]": "Background:=$CommonBgBrush",
   "controlStyles[0].styles[1]": "BorderThickness=0",
   "controlStyles[0].styles[2]": "CornerRadius=28",
-  "controlStyles[0].styles[3]": "Transitions=<TransitionCollection><EntranceThemeTransition FromVerticalOffset=\"80\" IsStaggeringEnabled=\"False\" /></TransitionCollection>",
+  "controlStyles[0].styles[3]": "Transitions=<TransitionCollection><EntranceThemeTransition FromVerticalOffset=\"64\" IsStaggeringEnabled=\"False\" /></TransitionCollection>",
 
   "controlStyles[1].target": "Border#AcrylicOverlay",
   "controlStyles[1].styles[0]": "Visibility=Collapsed",
 
   "controlStyles[2].target": "Border#BorderElement",
-  "controlStyles[2].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"14\" TintColor=\"#22000000\"/>",
+  "controlStyles[2].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
   "controlStyles[2].styles[1]": "BorderThickness=0",
   "controlStyles[2].styles[2]": "CornerRadius=28",
 
   "controlStyles[3].target": "MenuFlyoutPresenter > Border",
-  "controlStyles[3].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
+  "controlStyles[3].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"10\" TintColor=\"#22000000\"/>",
   "controlStyles[3].styles[1]": "BorderThickness=0",
   "controlStyles[3].styles[2]": "CornerRadius=24",
 
@@ -33,7 +33,7 @@
   "controlStyles[6].styles[0]": "Visibility=Collapsed",
 
   "controlStyles[7].target": "Border#TaskbarSearchBackground",
-  "controlStyles[7].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"14\" TintColor=\"#22000000\"/>",
+  "controlStyles[7].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
   "controlStyles[7].styles[1]": "BorderThickness=0",
   "controlStyles[7].styles[2]": "CornerRadius=28",
 
@@ -75,7 +75,7 @@
   "controlStyles[13].styles[3]": "Margin@Normal=4",
 
   "controlStyles[14].target": "ToolTip > ContentPresenter#LayoutRoot",
-  "controlStyles[14].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
+  "controlStyles[14].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"10\" TintColor=\"#22000000\"/>",
 
   "controlStyles[15].target": "Border#dropshadow",
   "controlStyles[15].styles[0]": "CornerRadius=28",
@@ -139,18 +139,18 @@
   "controlStyles[24].styles[5]": "MaxHeight:=600",
   "controlStyles[24].styles[6]": "MinHeight:=300",
 
-  "styleConstants[0]": "Background=<WindhawkBlur BlurAmount=\"14\" TintColor=\"#22000000\"/>",
+  "styleConstants[0]": "Background=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
   "styleConstants[1]": "BorderBrush2=Transparent",
   "styleConstants[2]": "BorderThickness=0",
   "styleConstants[3]": "CornerRadius=28",
   "styleConstants[4]": "SearchBoxRadius=28",
   "styleConstants[5]": "Background2=Transparent",
-  "styleConstants[6]": "ElementBG=<SolidColorBrush Color=\"#20FFFFFF\" Opacity=\"0.11\" />",
+  "styleConstants[6]": "ElementBG=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.09\" />",
   "styleConstants[7]": "ElementBorderThickness=0",
   "styleConstants[8]": "ElementCornerRadius=28",
   "styleConstants[9]": "ElementBorderBrush=Transparent",
   "styleConstants[10]": "BorderBrush=Transparent",
-  "styleConstants[11]": "CommonBgBrush=<WindhawkBlur BlurAmount=\"14\" TintColor=\"#22000000\"/>",
-  "styleConstants[12]": "FolderBG=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#30FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#10FFFFFF\" Offset=\"1\" /></LinearGradientBrush>",
-  "styleConstants[13]": "FolderBorder=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#90FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#08FFFFFF\" Offset=\"1\" /></LinearGradientBrush>"
+  "styleConstants[11]": "CommonBgBrush=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
+  "styleConstants[12]": "FolderBG=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#40FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#10FFFFFF\" Offset=\"1\" /></LinearGradientBrush>",
+  "styleConstants[13]": "FolderBorder=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#A0FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#10FFFFFF\" Offset=\"1\" /></LinearGradientBrush>"
 }
