@@ -1,0 +1,204 @@
+{
+  // ─────────────────────────────────────────────
+  // 0. MAIN OUTER GLASS BORDER (top-level frame)
+  // ─────────────────────────────────────────────
+  "controlStyles[0].target": "Border#AcrylicBorder",
+  "controlStyles[0].styles[0]": "Background:=$CommonBgBrush",          // uses global blur brush
+  "controlStyles[0].styles[1]": "BorderThickness=1",                   // thin border for shiny rim
+  "controlStyles[0].styles[2]": "CornerRadius=40",                     // big rounded corners (pill look)
+  "controlStyles[0].styles[3]": "BorderBrush:=$OuterBorder",           // gradient border (shine)
+  "controlStyles[0].styles[4]": "Transitions=<TransitionCollection><EntranceThemeTransition FromVerticalOffset=\"64\" IsStaggeringEnabled=\"False\" /></TransitionCollection>", // open animation
+
+  // overlay panel (disabled)
+  "controlStyles[1].target": "Border#AcrylicOverlay",
+  "controlStyles[1].styles[0]": "Visibility=Collapsed",
+
+  // ─────────────────────────────────────────────
+  // 1. MAIN BLUR BACKGROUND INSIDE START MENU
+  // ─────────────────────────────────────────────
+  "controlStyles[2].target": "Border#BorderElement",
+  "controlStyles[2].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>", // actual blur & tint
+  "controlStyles[2].styles[1]": "BorderThickness=0",
+  "controlStyles[2].styles[2]": "CornerRadius=40",
+
+  // Right-click / context menus glass
+  "controlStyles[3].target": "MenuFlyoutPresenter > Border",
+  "controlStyles[3].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"10\" TintColor=\"#22000000\"/>",
+  "controlStyles[3].styles[1]": "BorderThickness=0",
+  "controlStyles[3].styles[2]": "CornerRadius=24",
+
+  // AppBorder = additional frame around main panel (same radius)
+  "controlStyles[4].target": "Border#AppBorder",
+  "controlStyles[4].styles[0]": "Background:=$CommonBgBrush",
+  "controlStyles[4].styles[1]": "BorderThickness=0",
+  "controlStyles[4].styles[2]": "CornerRadius=40",
+  "controlStyles[4].styles[3]": "Transitions=<TransitionCollection><EntranceThemeTransition FromVerticalOffset=\"40\" IsStaggeringEnabled=\"False\" /></TransitionCollection>",
+
+  // Accent border layer, same style as main
+  "controlStyles[5].target": "Border#AccentAppBorder",
+  "controlStyles[5].styles[0]": "Background:=$CommonBgBrush",
+  "controlStyles[5].styles[1]": "BorderThickness=0",
+  "controlStyles[5].styles[2]": "CornerRadius=40",
+
+  // Hidden extra layer
+  "controlStyles[6].target": "Border#LayerBorder",
+  "controlStyles[6].styles[0]": "Visibility=Collapsed",
+
+  // Taskbar search background glass
+  "controlStyles[7].target": "Border#TaskbarSearchBackground",
+  "controlStyles[7].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>",
+  "controlStyles[7].styles[1]": "BorderThickness=0",
+  "controlStyles[7].styles[2]": "CornerRadius=40",
+
+  // ─────────────────────────────────────────────
+  // 2. INDIVIDUAL ITEM BACKGROUND (tiles, list rows)
+  // ─────────────────────────────────────────────
+  "controlStyles[8].target": "Border#ContentBorder@CommonStates > Grid#DroppedFlickerWorkaroundWrapper > Border",
+  "controlStyles[8].styles[0]": "Background@Normal:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.04\"/>", // idle tile background
+  "controlStyles[8].styles[1]": "Background@PointerOver:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.10\"/>", // hover
+  "controlStyles[8].styles[2]": "BorderBrush@PointerOver:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.22\"/>",
+  "controlStyles[8].styles[3]": "Margin=2",
+  "controlStyles[8].styles[4]": "Background@Pressed:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.08\"/>", // pressed
+  "controlStyles[8].styles[5]": "BorderBrush@Pressed:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.15\"/>",
+
+  // “Show all apps” button background
+  "controlStyles[9].target": "Button#ShowAllAppsButton > ContentPresenter@CommonStates",
+  "controlStyles[9].styles[0]": "Background@Normal:=$ElementBG",
+  "controlStyles[9].styles[1]": "Background@PointerOver:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.14\"/>",
+  "controlStyles[9].styles[2]": "BorderBrush@PointerOver:=Transparent",
+  "controlStyles[9].styles[3]": "BorderThickness=0",
+
+  // ─────────────────────────────────────────────
+  // 3. SEARCH BOX
+  // ─────────────────────────────────────────────
+  "controlStyles[10].target": "StartDocked.SearchBoxToggleButton#StartMenuSearchBox > Grid > Border#BorderElement",
+  "controlStyles[10].styles[0]": "BorderBrush:=Transparent",
+  "controlStyles[10].styles[1]": "BorderThickness=0",
+  "controlStyles[10].styles[2]": "CornerRadius=40", // pill search bar
+
+  // ─────────────────────────────────────────────
+  // 4. USER TILE (profile row, left bottom)
+  // ─────────────────────────────────────────────
+  "controlStyles[11].target": "StartDocked.NavigationPaneButton#UserTileButton > Grid@CommonStates > Border",
+  "controlStyles[11].styles[0]": "Background@Normal:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.05\"/>",
+  "controlStyles[11].styles[1]": "Background@PointerOver:=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.13\"/>",
+  "controlStyles[11].styles[2]": "BorderBrush@PointerOver:=Transparent",
+  "controlStyles[11].styles[3]": "BorderThickness=0",
+
+  // Pinned app list item container (each app tile glass)
+  "controlStyles[12].target": "StartDocked.AppListViewItem > Grid@CommonStates > Border",
+  "controlStyles[12].styles[0]": "Background:=$ElementBG",      // element tile background
+  "controlStyles[12].styles[1]": "BorderBrush:=Transparent",
+  "controlStyles[12].styles[2]": "BorderThickness=0",
+  "controlStyles[12].styles[3]": "Margin@Normal=4",
+
+  // Power button container (bottom-left)
+  "controlStyles[13].target": "StartDocked.NavigationPaneButton#PowerButton > Grid@CommonStates > Border",
+  "controlStyles[13].styles[0]": "Background:=$ElementBG",
+  "controlStyles[13].styles[1]": "BorderBrush:=Transparent",
+  "controlStyles[13].styles[2]": "BorderThickness=0",
+  "controlStyles[13].styles[3]": "Margin@Normal=4",
+
+  // Tooltips glass style
+  "controlStyles[14].target": "ToolTip > ContentPresenter#LayoutRoot",
+  "controlStyles[14].styles[0]": "Background:=<WindhawkBlur BlurAmount=\"10\" TintColor=\"#22000000\"/>",
+
+  // ─────────────────────────────────────────────
+  // 5. DROP SHADOW AROUND START MENU
+  // ─────────────────────────────────────────────
+  "controlStyles[15].target": "Border#dropshadow",
+  "controlStyles[15].styles[0]": "CornerRadius=40",
+  "controlStyles[15].styles[1]": "Margin=18",
+  "controlStyles[15].styles[2]": "Opacity=0.55", // intensity of shadow
+
+  "controlStyles[16].target": "Border#DropShadow",
+  "controlStyles[16].styles[0]": "CornerRadius=40",
+
+  // ─────────────────────────────────────────────
+  // 6. “ALL APPS” PANEL (CONTAINER & GRID)
+  // ─────────────────────────────────────────────
+  "controlStyles[17].target": "StartMenu.PinnedList#StartMenuPinnedList",
+  "controlStyles[17].styles[0]": "Visibility=0",
+  "controlStyles[17].styles[1]": "RenderTransform:=<TranslateTransform X=\"0\" Y=\"0\" />",
+  "controlStyles[17].styles[2]": "Height=Auto",
+  "controlStyles[17].styles[3]": "MinHeight:=100",
+  "controlStyles[17].styles[4]": "MaxHeight:=10000",
+
+  // Inner border for pinned list grid
+  "controlStyles[18].target": "StartMenu.PinnedList#StartMenuPinnedList > Windows.UI.Xaml.Controls.Grid#Root > Windows.UI.Xaml.Controls.GridView#PinnedList > Windows.UI.Xaml.Controls.Border",
+  "controlStyles[18].styles[0]": "Background:=$ElementBG",
+  "controlStyles[18].styles[1]": "BorderBrush:=$ElementBorderBrush",
+  "controlStyles[18].styles[2]": "CornerRadius=$CornerRadius",
+  "controlStyles[18].styles[3]": "BorderThickness=$ElementBorderThickness",
+  "controlStyles[18].styles[4]": "Padding:=20,10,0,10",
+  "controlStyles[18].styles[5]": "Margin=30,0,25,0",
+
+  // ─────────────────────────────────────────────
+  // 7. UNDERLYING ROOT GRID BORDER
+  //    (mostly neutral, background frame)
+  // ─────────────────────────────────────────────
+  "controlStyles[19].target": "Windows.UI.Xaml.Controls.Grid#Root > Windows.UI.Xaml.Controls.Border",
+  "controlStyles[19].styles[0]": "BorderBrush:=Transparent",
+  "controlStyles[19].styles[1]": "Background:=$Background",
+  "controlStyles[19].styles[2]": "BorderThickness=0",
+  "controlStyles[19].styles[3]": "CornerRadius=$CornerRadius",
+
+  // Generic BorderElement cleanup (no extra backgrounds)
+  "controlStyles[20].target": "Windows.UI.Xaml.Controls.Border#BorderElement",
+  "controlStyles[20].styles[0]": "Background=Transparent",
+  "controlStyles[20].styles[1]": "BorderThickness=0",
+
+  // ─────────────────────────────────────────────
+  // 8. CATEGORY BOXES  (Accessibility / Creativity / etc)
+  // ─────────────────────────────────────────────
+  "controlStyles[21].target": "StartMenu.CategoryControl > Windows.UI.Xaml.Controls.Grid#RootGrid > Windows.UI.Xaml.Controls.Border",
+  "controlStyles[21].styles[0]": "BorderThickness=2",
+  "controlStyles[21].styles[1]": "CornerRadius=$ElementCornerRadius",
+  "controlStyles[21].styles[2]": "BorderBrush:=$FolderBorder",     // gradient border
+  "controlStyles[21].styles[3]": "Background:=$FolderBG",          // gradient fill
+  "controlStyles[21].styles[4]": "Margin=4,4,4,8",
+  "controlStyles[21].styles[5]": "Background@PointerOver:=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#35FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#15FFFFFF\" Offset=\"1\" /></LinearGradientBrush>",
+  "controlStyles[21].styles[6]": "BorderBrush@PointerOver:=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#20FFFFFF\" Offset=\"1\" /></LinearGradientBrush>",
+
+  // Media controls (if shown in this layout)
+  "controlStyles[22].target": "Windows.UI.Xaml.Controls.Grid#MediaTransportControls",
+  "controlStyles[22].styles[0]": "Background:=$Background",
+  "controlStyles[22].styles[1]": "BorderBrush:=Transparent",
+  "controlStyles[22].styles[2]": "BorderThickness=0",
+  "controlStyles[22].styles[3]": "CornerRadius=$CornerRadius",
+
+  // Flicker workaround background (kept synced with main bg)
+  "controlStyles[23].target": "Windows.UI.Xaml.Controls.Grid#DroppedFlickerWorkaroundWrapper > Windows.UI.Xaml.Controls.Border#BackgroundBorder",
+  "controlStyles[23].styles[0]": "Background@PointerOver:=$Background",
+  "controlStyles[23].styles[1]": "Background@Pressed:=$Background",
+  "controlStyles[23].styles[2]": "Background@Selected:=$Background",
+
+  // Right companion panel (phone link style) geometry
+  "controlStyles[24].target": "Windows.UI.Xaml.Controls.Grid#RightCompanionContainerGrid",
+  "controlStyles[24].styles[0]": "Margin=0,0,0,-125",
+  "controlStyles[24].styles[1]": "RenderTransform:=<TranslateTransform X=\"0\" Y=\"0\" />",
+  "controlStyles[24].styles[2]": "Width=200",
+  "controlStyles[24].styles[3]": "Height=Auto",
+  "controlStyles[24].styles[4]": "CornerRadius=40",
+  "controlStyles[24].styles[5]": "MaxHeight:=600",
+  "controlStyles[24].styles[6]": "MinHeight:=300",
+
+  // ─────────────────────────────────────────────
+  // 9. GLOBAL CONSTANTS / TOKENS
+  // ─────────────────────────────────────────────
+  "styleConstants[0]":  "Background=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>", // main blur token
+  "styleConstants[1]":  "BorderBrush2=Transparent",
+  "styleConstants[2]":  "BorderThickness=0",
+  "styleConstants[3]":  "CornerRadius=40",                          // global “big” radius
+  "styleConstants[4]":  "SearchBoxRadius=40",
+  "styleConstants[5]":  "Background2=Transparent",
+  "styleConstants[6]":  "ElementBG=<SolidColorBrush Color=\"#FFFFFF\" Opacity=\"0.09\" />", // tile background base
+  "styleConstants[7]":  "ElementBorderThickness=0",
+  "styleConstants[8]":  "ElementCornerRadius=40",
+  "styleConstants[9]":  "ElementBorderBrush=Transparent",
+  "styleConstants[10]": "BorderBrush=Transparent",
+  "styleConstants[11]": "CommonBgBrush=<WindhawkBlur BlurAmount=\"12\" TintColor=\"#22000000\"/>", // same as Background (reused)
+  "styleConstants[12]": "FolderBG=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#40FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#10FFFFFF\" Offset=\"1\" /></LinearGradientBrush>", // category fill
+  "styleConstants[13]": "FolderBorder=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#A0FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#10FFFFFF\" Offset=\"1\" /></LinearGradientBrush>", // category border
+  "styleConstants[14]": "OuterBorder=<LinearGradientBrush StartPoint=\"0,0\" EndPoint=\"1,1\"><GradientStop Color=\"#40FFFFFF\" Offset=\"0.0\" /><GradientStop Color=\"#08FFFFFF\" Offset=\"1\" /></LinearGradientBrush>" // shiny rim for whole panel
+}
